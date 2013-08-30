@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		13872350283344E7A51BE197 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4527DA13A8EE418AB508D3F9 /* libPods.a */; };
 		D263CACB17D04402009A8E00 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D263CACA17D04402009A8E00 /* Podfile */; };
-		D2708F5017CA1BE3005F190C /* PeakCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2708F4F17CA1BE3005F190C /* PeakCategory.m */; };
+		D263CAD517D0CE0B009A8E00 /* UIView+Peak.m in Sources */ = {isa = PBXBuildFile; fileRef = D263CAD417D0CE0B009A8E00 /* UIView+Peak.m */; };
+		D263CAD817D0CE3B009A8E00 /* NSString+Peak.m in Sources */ = {isa = PBXBuildFile; fileRef = D263CAD717D0CE3B009A8E00 /* NSString+Peak.m */; };
 		D2708F5217CA1BF1005F190C /* PeakCategory.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D2708F5117CA1BF1005F190C /* PeakCategory.podspec */; };
 		D296E12617C791E30036B3ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D296E12517C791E30036B3ED /* UIKit.framework */; };
 		D296E12817C791E30036B3ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D296E12717C791E30036B3ED /* Foundation.framework */; };
@@ -26,8 +27,11 @@
 		4527DA13A8EE418AB508D3F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24C019F9A9C418BB00BD6D9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = "PeakCategory-Samples/Pods/Pods.xcconfig"; sourceTree = SOURCE_ROOT; };
 		D263CACA17D04402009A8E00 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D263CAD317D0CE0B009A8E00 /* UIView+Peak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Peak.h"; sourceTree = "<group>"; };
+		D263CAD417D0CE0B009A8E00 /* UIView+Peak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Peak.m"; sourceTree = "<group>"; };
+		D263CAD617D0CE3B009A8E00 /* NSString+Peak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Peak.h"; sourceTree = "<group>"; };
+		D263CAD717D0CE3B009A8E00 /* NSString+Peak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Peak.m"; sourceTree = "<group>"; };
 		D2708F4E17CA1BE3005F190C /* PeakCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeakCategory.h; sourceTree = "<group>"; };
-		D2708F4F17CA1BE3005F190C /* PeakCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeakCategory.m; sourceTree = "<group>"; };
 		D2708F5117CA1BF1005F190C /* PeakCategory.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PeakCategory.podspec; path = ../../PeakCategory.podspec; sourceTree = "<group>"; };
 		D296E12217C791E30036B3ED /* PeakCategory-Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeakCategory-Samples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D296E12517C791E30036B3ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -63,7 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				D2708F4E17CA1BE3005F190C /* PeakCategory.h */,
-				D2708F4F17CA1BE3005F190C /* PeakCategory.m */,
+				D263CAD317D0CE0B009A8E00 /* UIView+Peak.h */,
+				D263CAD417D0CE0B009A8E00 /* UIView+Peak.m */,
+				D263CAD617D0CE3B009A8E00 /* NSString+Peak.h */,
+				D263CAD717D0CE3B009A8E00 /* NSString+Peak.m */,
 			);
 			name = PeakCategory;
 			path = ../PeakCategory;
@@ -229,7 +236,8 @@
 			files = (
 				D296E13217C791E30036B3ED /* main.m in Sources */,
 				D296E13617C791E30036B3ED /* AppDelegate.m in Sources */,
-				D2708F5017CA1BE3005F190C /* PeakCategory.m in Sources */,
+				D263CAD517D0CE0B009A8E00 /* UIView+Peak.m in Sources */,
+				D263CAD817D0CE3B009A8E00 /* NSString+Peak.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
