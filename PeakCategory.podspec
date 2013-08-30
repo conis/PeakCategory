@@ -13,7 +13,4 @@ Pod::Spec.new do |s|
   
   #添加依赖
   s.dependency  'UIView+Helpers'
-  s.dependency  'NSDate-Extensions'
-  s.dependency  'NSDate+Helper'
-  s.dependency  'UIColor+ColorWithHex', :git => 'https://github.com/conis/UIColor-ColorWithHex.git', :branch => 'master'
 end
