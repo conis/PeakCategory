@@ -1,14 +1,14 @@
 //
-//  PeakCategory.m
+//  UIView+Peak.m
 //  PeakCategory-Samples
 //
-//  Created by conis on 8/25/13.
+//  Created by conis on 8/30/13.
 //  Copyright (c) 2013 conis. All rights reserved.
 //
 
-#import "PeakCategory.h"
-@implementation UIView(Peak)
+#import "UIView+Peak.h"
 
+@implementation UIView (Peak)
 - (CGPoint)origin
 {
   return [self frame].origin;
@@ -132,16 +132,3 @@
   }
 }
 @end
-
-#pragma mark 对NSString进行扩展
-@implementation NSString (Helpers)
-
--(NSString *) trim{
-  return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-}
-
-+(NSString *) stringWithInt:(NSInteger)value{
-  return [NSString stringWithFormat:@"%d", value];
-}
-@end
-
