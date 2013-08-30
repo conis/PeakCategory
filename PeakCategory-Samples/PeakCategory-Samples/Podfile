@@ -1,0 +1,9 @@
+platform :ios, '5.0'
+
+pod 'UIView+Helpers',  :git => 'git@github.com:andrewroycarter/UIView-Helpers.git', :branch => 'master'
+pod 'NSDate+Helper'
+pod 'NSDate-Extensions'
+pod 'UIColor+ColorWithHex', :git => 'https://github.com/conis/UIColor-ColorWithHex.git', :branch => 'master'
+
+xcodeproj '../PeakCategory-Samples.xcodeproj'
+
