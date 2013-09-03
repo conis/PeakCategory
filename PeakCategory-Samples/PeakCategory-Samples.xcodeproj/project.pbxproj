@@ -21,6 +21,7 @@
 		D296E13817C791E30036B3ED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D296E13717C791E30036B3ED /* Default.png */; };
 		D296E13A17C791E30036B3ED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D296E13917C791E30036B3ED /* Default@2x.png */; };
 		D296E13C17C791E30036B3ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D296E13B17C791E30036B3ED /* Default-568h@2x.png */; };
+		D2B846F217D5FF57000F6032 /* NSDictionary+Merge.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B846F117D5FF57000F6032 /* NSDictionary+Merge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		D296E13717C791E30036B3ED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D296E13917C791E30036B3ED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D296E13B17C791E30036B3ED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D2B846F017D5FF57000F6032 /* NSDictionary+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Merge.h"; sourceTree = "<group>"; };
+		D2B846F117D5FF57000F6032 /* NSDictionary+Merge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Merge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				D263CAD417D0CE0B009A8E00 /* UIView+Peak.m */,
 				D263CAD617D0CE3B009A8E00 /* NSString+Peak.h */,
 				D263CAD717D0CE3B009A8E00 /* NSString+Peak.m */,
+				D2B846F017D5FF57000F6032 /* NSDictionary+Merge.h */,
+				D2B846F117D5FF57000F6032 /* NSDictionary+Merge.m */,
 			);
 			name = PeakCategory;
 			path = ../PeakCategory;
@@ -238,6 +243,7 @@
 				D296E13617C791E30036B3ED /* AppDelegate.m in Sources */,
 				D263CAD517D0CE0B009A8E00 /* UIView+Peak.m in Sources */,
 				D263CAD817D0CE3B009A8E00 /* NSString+Peak.m in Sources */,
+				D2B846F217D5FF57000F6032 /* NSDictionary+Merge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
