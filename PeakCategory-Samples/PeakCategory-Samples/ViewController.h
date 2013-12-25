@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //  PeakCategory-Samples
 //
 //  Created by conis on 12/25/13.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+Peak.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface ViewController : UIViewController
 
 @end

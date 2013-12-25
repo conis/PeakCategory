@@ -2,7 +2,7 @@
 //  main.m
 //  PeakCategory-Samples
 //
-//  Created by conis on 8/23/13.
+//  Created by conis on 12/25/13.
 //  Copyright (c) 2013 conis. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 #import "AppDelegate.h"
 
-int main(int argc, char *argv[])
+int main(int argc, char * argv[])
 {
   @autoreleasepool {
       return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));

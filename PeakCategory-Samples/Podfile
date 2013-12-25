@@ -5,5 +5,5 @@ pod 'NSDate+Helper'
 pod 'NSDate-Extensions'
 pod 'UIColor+ColorWithHex', :git => 'https://github.com/conis/UIColor-ColorWithHex.git', :branch => 'master'
 
-xcodeproj '../PeakCategory-Samples.xcodeproj'
+xcodeproj 'PeakCategory-Samples.xcodeproj'
 
