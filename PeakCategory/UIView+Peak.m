@@ -9,6 +9,9 @@
 #import "UIView+Peak.h"
 
 @implementation UIView (Peak)
+CALayer *_drawLayer;
+UIImage *_drawImage;
+
 - (CGPoint)origin
 {
   return [self frame].origin;
@@ -130,5 +133,68 @@
     UIView *view = self.subviews[i];
     [view printSelf];
   }
+}
+
+-(void) drawBorder:(UIViewBorder)border color:(UIColor *)color width:(CGFloat)width{
+  if(border & UIViewBorderTop || border & UIViewBorderAround || border & UIViewBorderTopBottom){
+    [self drawLineWithFromPoint:CGPointMake(0, 0) toPoint:CGPointMake(self.width, 0) color:color width:width];
+  }
+  
+  if(border & UIViewBorderRight || border & UIViewBorderAround || border & UIViewBorderLeftRight){
+    [self drawLineWithFromPoint:CGPointMake(self.width, 0) toPoint:CGPointMake(self.width, self.height) color:color width:width];
+  }
+  
+  if(border & UIViewBorderBottom || border & UIViewBorderAround || border & UIViewBorderTopBottom){
+    [self drawLineWithFromPoint:CGPointMake(0, self.height) toPoint:CGPointMake(self.width, self.height) color:color width:width];
+  }
+  
+  if(border & UIViewBorderLeft || border & UIViewBorderAround || border & UIViewBorderLeftRight){
+    [self drawLineWithFromPoint:CGPointMake(0, 0) toPoint:CGPointMake(0, self.height) color:color width:width];
+  }
+  
+  if(border & UIViewBorderSlash){
+    [self drawLineWithFromPoint:CGPointMake(0, 0) toPoint:CGPointMake(self.width, self.height) color:color width:width];
+  }
+  
+  if(border & UIViewBorderBackslash){
+    [self drawLineWithFromPoint:CGPointMake(0, self.height) toPoint:CGPointMake(self.width, 0) color:color width:width];
+  }
+}
+
+-(void) drawLineWithFromPoint:(CGPoint)from toPoint:(CGPoint)to color:(UIColor *)color width:(CGFloat)width{
+  if(_drawLayer == nil){
+    _drawLayer = [[CALayer alloc] init];
+    _drawLayer.frame = self.bounds;
+    ;
+    [self.layer addSublayer: _drawLayer];
+  }
+  
+  UIGraphicsBeginImageContext(self.size);
+	CGContextRef ctx = UIGraphicsGetCurrentContext();
+  CGContextScaleCTM(ctx, 1.0f, -1.0f);
+	CGContextTranslateCTM(ctx, 0.0f, -self.frame.size.height);
+  
+  if (_drawImage != nil) {
+		CGContextDrawImage(ctx, self.bounds, _drawImage.CGImage);
+	}
+  
+	CGContextSetLineCap(ctx, kCGLineCapRound);
+	CGContextSetLineWidth(ctx, width);
+	CGContextSetStrokeColorWithColor(ctx, color.CGColor);
+	CGContextMoveToPoint(ctx, from.x, from.y);
+	CGContextAddLineToPoint(ctx, to.x, to.y);
+	CGContextStrokePath(ctx);
+	CGContextFlush(ctx);
+  
+	_drawImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	_drawLayer.contents = (id)_drawImage.CGImage;
+}
+
+//重置画布，针对画线与边框
+-(void) resetCanvas{
+  [_drawLayer removeFromSuperlayer];
+  _drawLayer = nil;
+  _drawImage = nil;
 }
 @end
